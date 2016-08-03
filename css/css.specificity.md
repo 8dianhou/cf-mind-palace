@@ -2,7 +2,7 @@
 [https://css-tricks.com/specifics-on-css-specificity/](https://css-tricks.com/specifics-on-css-specificity/)
 
 #### summary:
-in my understanding, css specificity contains 4 levels:
+Form my understanding, css specificity contains 4 levels:
 * element tag is lv1: 0,0,0,__1__
 * class/psuedo-class/attr is lv2: 0,0,__1__,0
 * ID is lv3: 0,__1__,0,0
