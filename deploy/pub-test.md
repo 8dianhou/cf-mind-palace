@@ -19,19 +19,39 @@
 
   git pull  
 
-  git merge --no-ff origin/${branchName}
+  git checkout origin/${branchName}
+
+  git merge develop
 
   git push
 
-  repeat above commands, until all pull requests merged into develop
+  repeat above 3 commands, until all pull requests merged from develop
+
+  git checkout develop
+
+  git merge --no-ff ${branchName}
+
+  git push
+
+  repeat above 2 commands, until all pull requests merged into develop
 
   if conflict happened, solve conflicts first
 
   npm run pub-test
 
-  ssh cf-test
+  ssh cf-test@139.196.193.120
 
-  run scripts(.js、.sql)
+  cd apps/${projectName}
+
+  node ${jsFileName}
+
+  mysql -u cfdev -p ${tableName}(admin:cfdb/assessment:assessment)
+
+  source ${sqlFileName}
+
+  exit
+
+  exit
 
   make sure that all branch workers checkout to develop
   ```

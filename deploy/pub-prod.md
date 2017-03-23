@@ -31,13 +31,17 @@
 
     npm run pub-prod
 
-    ssh cf-prod
+    ssh cf-prod@139.196.197.99(assessment项目：ssh assessment-prod@106.15.35.30)
 
-    run scripts(.js .sql) according to the checklist.md
+    node ${jsFileName} (according to the checklist.md)
+
+    mysql -u cfdev -p ${tableName}(admin:cfdb/assessment:assessment)
+
+    source ${sqlFileName} (according to the checklist.md)
 
     exit to local
 
-    git tag v1.xx.0 -a & write release notes
+    git tag v1.xx.0 -a & write release notes(like 2017-03-23 更新图片)
 
     git push origin v1.xx.0
 
