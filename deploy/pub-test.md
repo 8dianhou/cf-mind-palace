@@ -36,7 +36,9 @@
   repeat above 2 commands, until all pull requests merged into develop
 
   if conflict happened, solve conflicts first
-
+  
+  sync prod database 
+  
   npm run pub-test
 
   ssh cf-test@139.196.193.120
