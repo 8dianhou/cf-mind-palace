@@ -24,12 +24,12 @@
 # extra setups
   > to get the most out of the new features
 
-  1. [babel-register](https://babeljs.io/docs/usage/babel-register/)
+  <!-- 1. [babel-register](https://babeljs.io/docs/usage/babel-register/)
 
     - install module dependences:
 
       ```
-      cnpm i --save-dev babel-register babel-preset-node6 babel-plugin-transform-async-to-generator
+      cnpm i --save babel-register babel-preset-node6 babel-plugin-transform-async-to-generator
       ```
 
     - in `app.js`, add the following line at the top:
@@ -39,7 +39,7 @@
         presets: ['babel-preset-node6'],
         plugins: ['transform-async-to-generator']
       });
-      ```
+      ``` -->
   2. eslint
 
     - why
@@ -49,6 +49,7 @@
     - install
       atom package linter-eslint
       ```
+      cnpm i -g eslint eslint-plugin-import eslint-config-airbnb-base
       cnpm i --save-dev eslint eslint-plugin-import eslint-config-airbnb-base
       ```
 
