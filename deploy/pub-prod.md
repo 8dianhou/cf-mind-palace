@@ -7,7 +7,7 @@
 
     cd ~/backup
 
-    mysqldump -u cfdev -p cfdb | gzip -c > cfdb-prod_2017-01-13.sql.gz;
+    mysqldump -u cfdev -p cfdb | gzip > cfdb-prod_2017-01-13.sql.gz;
 
     scp cfdb-prod_2017-01-13.sql.gz cf-test@139.196.193.120:~/backup
 
