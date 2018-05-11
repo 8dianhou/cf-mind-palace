@@ -24,7 +24,7 @@ output {
 ###
 
 - elasticsearch list all indices
-	`GET /_cat/indices?v`
+	`curl localhost:9200/_cat/indices?v` !do not run this in zsh, use /bin/sh
 
 - elasticsearch delete indices
 	`curl -XDELETE localhost:9200/logstash-*`
