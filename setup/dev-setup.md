@@ -34,7 +34,7 @@
 
   * **Chrome:** chrome comes in handy for testing web app with some awesome tools, including **postman**, **hostadmin** and of course, it's own Developer tools.
 
-  * **Atom:** install atom from [atom.io](https://atom.io). Be sure to add atom shell by click menu **atom/install shell commands** on an active atom window.
+  * **Atom:** install atom from [**atom.io**](https://atom.io). Be sure to add atom shell by click menu **atom/install shell commands** on an active atom window.
 
   * **oh-my-zsh:** install with a single line of code:
   ```bash
@@ -42,21 +42,28 @@
   ```
   docs are [here](https://github.com/robbyrussell/oh-my-zsh)
 
-  * **Kaleidoscope:** download from file sharing service NAS. goto menu *Kaleidoscope/integration...*, select git, follow the instructions.
+  * **Kaleidoscope:** download from file sharing service NAS. then goto menu *Kaleidoscope/integration...*, select git, follow the instructions.
     KaleidoscopeLicense also in the NAS.
+
+  * **Axure:** Axure is a wireframing and prototyping tool for web and user experience designers. download from NAS.
 
 ### 3. node, mysql and nginx install and configuration
   * **Node.js**
-    * install cnpm pm2 and gulp
+    * install cnpm
     ```bash
-    sudo npm install -g cnpm
-    sudo cnpm install -g pm2 gulp gulp-cli
+    npm install -g cnpm --registry=https://registry.npm.taobao.org
+    ```
+    * install npm modules with cnpm
+    ```bash
+    cnpm i -g pm2 gulp gulp-cli bower webpack nodemon
+    cnpm i -g eslint eslint-plugin-import eslint-config-airbnb-base
     ```
     * install with nvm:
-    [**nvm installation**](https://github.com/8dianhou/cf-mind-palace/blob/master/javascript/upgrade_to_node_v6.md)
-    * please check you complete extra setups mentioned in nvm installation md.
-    * install other basic global modules:
-    [**click here**](https://github.com/8dianhou/cf-mind-palace/blob/master/javascript/use_babel_everywhere.md)
+    ```bash
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+    nvm install v8.11.1
+    nvm alias default v8.11.1
+    ```
 
   * **Mysql**   
     installation and config:
@@ -121,7 +128,7 @@
 
   ```bash
   brew install nginx
-  sudo brew services start nginx
+  brew services start nginx
   ```
 
   edit nginx config (using **cf-admin** as an example):
@@ -144,13 +151,13 @@
   ```
   save the file, then reload nginx server:
   ```bash
-  sudo nginx -s reload
+  nginx -s reload
   ```
 
 ### 4. Dev Tools
 
   * Chrome Extensions(Chrome Webstore)
-    * HostAdmin
+    * HostAdmin：
     open HostAdmin, and then click Editor  
     ```
       #==== Careefrog
@@ -173,7 +180,5 @@
       127.0.0.1   test.ceping.careerfrog.com.cn
       #====
     ```
-
-    * Postman
-    * Postman Interceptor
     * EditThisCookie
+  * Postman
